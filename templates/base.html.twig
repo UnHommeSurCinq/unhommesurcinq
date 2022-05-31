@@ -15,6 +15,12 @@
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
         {% endblock %}
+        <style>
+            .navbar-brand-img {
+                max-height: 3.5rem;
+                margin-bottom: -1.8rem;
+            }
+        </style>
 
         {% block javascripts %}
             {{ encore_entry_script_tags('app') }}
@@ -25,7 +31,7 @@
             <div class="container">
                 <!-- Brand -->
                 <a class="navbar-brand" href="{{ path('home') }}">
-                    <img src="{{ asset('images/logos/Un homme sur cinq.png') }}" class="navbar-brand-img" alt="Un homme sur cinq">
+                    <img src="{{ asset('images/logos/Un homme sur cinq.svg') }}" class="navbar-brand-img" alt="Un homme sur cinq">
                 </a>
             
                 <!-- Toggler -->
@@ -60,7 +66,7 @@
                             </a>
                         </li>
                     </ul>
-                    <a class="btn btn-secondary" href="{{ path('ressources_gratuites') }}">
+                    <a class="navbar-btn btn btn-sm btn-secondary lift ms-auto" href="{{ path('ressources_gratuites') }}">
                         Kit gratuit
                     </a>
                 </div>
@@ -74,11 +80,6 @@
                 <div class="row">
 
                     <div class="col-6 col-md-4 mb-6">
-                        <p class="mb-6">
-                            <a href="{{ path('home') }}">
-                                <img src="{{ asset('images/logos/Un homme sur cinq.png') }}" alt="Un homme sur cinq" class="footer-brand img-fluid mb-2" width="150">
-                            </a>
-                        </p>
                         <h4 class="h2">Nos conseils directement dans vos emails</h4>
                         <form>
                             <div class="form-group py-3">
@@ -91,6 +92,11 @@
                     </div><!-- .col -->
 
                     <div class="col-6 col-md-4">
+                        <p class="mb-6">
+                            <a href="{{ path('home') }}">
+                                <img src="{{ asset('images/logos/Un homme sur cinq blanc.svg') }}" alt="Un homme sur cinq" class="footer-brand img-fluid mb-2">
+                            </a>
+                        </p>
                         <h4 class="h4 text-uppercase">Vous avez une question ?</h4>
                         <ul class="list-unstyled mb-7">
                             <li class="d-flex">
